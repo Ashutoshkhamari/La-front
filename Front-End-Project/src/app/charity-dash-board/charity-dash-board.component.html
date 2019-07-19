@@ -1,0 +1,139 @@
+<div class="w3-display-container w3-green" style="height:800px;">
+    <img src="../../assets/img/donating-food.jpg" height="100%" width="100%"/>
+    <div class="w3-display-middle w3-center">
+      <span class="hd">Welcome to {{charity.charityName}}</span>
+			<br/>
+			<h4>A charitable organization or charity is a non-profit organization whose primary objectives 
+				are philanthropy and social well-being. The legal definition of a charitable organization varies 
+				between countries and in some instances regions of the country.</h4>
+			<a href="DashboardComponent#charityLogs" class="w3-btn w3-yellow w3-large w3-round " >
+				<i class="fa fa-list" aria-hidden="true"></i>&nbsp;Charity Logs</a>
+    </div>
+</div>
+<div class="container w3-padding-64" id="charityLogs">
+		<h6 class="hd w3-center"><span class="w3-text-yellow">Charity</span> Log</h6>
+		<div class="w3-padding-64" style="margin-top: -10px" >
+		 
+
+			<!-- Single Assignment Log -->
+			<div class="w3-card-4" style="margin: 10px" *ngFor="let item of charityLogs.logs">
+				<h3 class="w3-light-gray w3-padding">
+					<b>#{{item._id}}</b>
+					<button class="w3-btn w3-small w3-yellow w3-round w3-right" >Received</button>
+				</h3>
+			  <div class="row w3-padding" *ngFor="let log of charityLogs.logs">
+         <div class="col-md-3" *ngFor="let item of charityLogs.logs">
+					 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Request</span> <span class="w3-text-yellow"> Date</span></h5>
+					 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{item.date}}</h6> 
+					 <br/>
+					 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Recived</span> <span class="w3-text-yellow"> Time</span></h5>
+				   <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{item.date}}</h6>
+				 </div>
+				 <div class="col-md-3 w3-small" *ngFor="let item of charityLogs.logs">
+						<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Requested</span></h5>
+						<h6>
+							<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+&nbsp;
+							<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
+							<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;{{charity.foodRequirement}}</h6> 
+							<hr/>
+						<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Received</span></h5>
+						<h6>
+							<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+
+							<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
+							<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
+					</div>
+					<div class="col-md-3" *ngFor="let item of charityLogs.logs">
+							<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Delivery</span> <span class="w3-text-yellow"> Boy</span></h5>
+							<h6>
+								<img src="../../assets/img/scooter.png" height="20px" />&nbsp;&nbsp;{{item.charityStatus.deliveryBoyName}}
+								<br/>
+								<i class="fa fa-phone w3-text-yellow"></i>&nbsp;&nbsp;{{item.charityStatus.mobile}}
+							</h6>
+					</div>
+					<div class="col-md-3">
+							<h6>Submit Your Review</h6>
+							<div class="form-group">
+								<img src="../../assets/img/starYellow.png" height="20px" />
+								<img src="../../assets/img/starYellow.png" height="20px" />
+								<img src="../../assets/img/starYellow.png" height="20px" />
+								<img src="../../assets/img/starYellow.png" height="20px" />
+								<img src="../../assets/img/starBlank.png" height="20px" />
+							</div>
+							<div class="form-group">
+								<label>Review</label>
+								<textarea class="form-control"></textarea>
+							</div>
+							<div class="form-group">
+								<button class="w3-btn w3-small w3-green w3-round" >Submit</button>
+							</div>
+					</div>
+			  </div>
+			</div>
+			<!-- End Of Assignment Log -->
+
+						<!-- Single Assignment Log -->
+						<div class="w3-card-4" style="margin: 10px">
+								<h3 class="w3-light-gray w3-padding">
+									<b>#123AS321</b>
+									<button class="w3-btn w3-small w3-yellow w3-round w3-right" >Recived</button>
+								</h3>
+								<div class="row w3-padding">
+								 <div class="col-md-3">
+									 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Request</span> <span class="w3-text-yellow"> Date Time</span></h5>
+									 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;23/06/2019 10:30 PM</h6> 
+									 <br/>
+									 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Recived</span> <span class="w3-text-yellow"> Date Time</span></h5>
+									 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;23/06/2019 10:30 PM</h6>
+								 </div>
+								 <div class="col-md-3 w3-small">
+										<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Requested</span></h5>
+										<h6>
+											<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+&nbsp;
+											<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
+											<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
+											<hr/>
+										<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Recived</span></h5>
+										<h6>
+											<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+
+											<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
+											<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
+									</div>
+									<div class="col-md-3">
+											<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Delivery</span> <span class="w3-text-yellow"> Boy</span></h5>
+											<h6>
+												<img src="../../assets/img/scooter.png" height="20px" />&nbsp;&nbsp;Ashutosh Khamari
+												<br/>
+												<i class="fa fa-phone w3-text-yellow"></i>&nbsp;&nbsp;+91-8339829343
+											</h6>
+									</div>
+									<div class="col-md-3">
+											<h6><span style="border-bottom: 2px solid yellow;font-weight: bold">Submit Your Rating</span></h6>
+											<div class="form-group">
+		
+												<div class="rating">
+													<!-- <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> -->
+													<input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+													<input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+													<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+													<input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+													<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Awful">1 star</label>
+    
+								
+												</div>
+											</div>
+											<!-- <div class="form-group">
+												<label>Review</label>
+												<textarea class="form-control"></textarea>
+											</div> -->
+											<div class="form-group">
+												<button class="w3-btn w3-small w3-green w3-round" >Submit</button>
+											</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Of Assignment Log -->
+
+										
+
+		  </div>
+</div>
